@@ -10,6 +10,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { QueryFormComponent } from './components/query-form/query-form.component';
 import { ProjectGalleryComponent } from './components/project-gallery/project-gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
