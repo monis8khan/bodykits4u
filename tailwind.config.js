@@ -17,8 +17,6 @@ module.exports = {
       base: '#f0f7f4'
     },
     fontFamily: {
-      display: ['Gilroy', 'sans-serif'],
-      body: ['Graphik', 'sans-serif'],
     },
     borderWidth: {
       default: '1px',
