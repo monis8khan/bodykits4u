@@ -1,8 +1,8 @@
 <div class="relative">
     <div class="carousel-inner relative overflow-hidden w-full">
         <!--Slide 1-->
-        <div *ngFor="let testimonial of testimonialData" class="container mx-auto px-20" style="height:50vh;">
-            <div class=" py-10 px-20 bg-base shadow-lg rounded-lg my-20 hover:shadow-2xl">
+        <div *ngFor="let testimonial of testimonialData" class="container mx-auto px-20" >
+            <div *ngIf="toShow === testimonial.id" class=" py-10 px-20 bg-base shadow-lg rounded-lg my-20 hover:shadow-2xl">
                 <img class="w-20 h-20 object-cover rounded-full border-2 border-primary"
                     src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80">
 
@@ -15,9 +15,9 @@
                 </div>
             </div>
         </div>
-        <label for="carousel-3"
-            class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-        <label for="carousel-2"
-            class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+        <label (click)="slideChange('previous')" for="carousel-3"
+            class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-secondary leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label (click)="slideChange('next')" for="carousel-2"
+            class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-secondary leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
 </div>

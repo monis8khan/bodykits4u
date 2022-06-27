@@ -9,10 +9,21 @@ import { TestimonialsService } from 'src/app/services/testimonials.service';
 })
 export class TestimonialsComponent implements OnInit {
   testimonialData? : testimonialsInterface[];
+  toShow: number = 1;
   constructor(private testim: TestimonialsService) { }
 
   ngOnInit(): void {
     this.testimonialData = this.testim.getTestimonialsData();
+  }
+
+  slideChange(test: string){
+    console.log(this.toShow)
+    if(test === 'next' && this.toShow !== this.testimonialData?.length){
+        this.toShow++;
+    }
+    else if(test === 'previous' && this.toShow !== 1){
+        this.toShow--;
+    }
   }
 
 }
