@@ -1,28 +1,20 @@
 <div class="container mx-auto">
-    <div class="grid-cols-3 p-20 space-y-2 bg-slate-50 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
-        <div class="w-full rounded">
-            <img src="https://img.freepik.com/free-vector/sport-car-jdm-illustration_73313-244.jpg?w=2000"
+    
+    <header class="text-center mx-auto mt-12 lg:px-20">
+        <h2 class="text-2xl leading-normal mb-2 font-bold text-secondary">Our Projects</h2>
+        <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">We provide best and top of the line body kits &amp; car parts.</p>
+    </header>
+
+    <div class="grid-cols-3 p-20 space-y-2 bg-base rounded-3xl shadow-xl lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
+        
+        <div class="w-full col-span-2 row-span-2 rounded" style="height:533px; overflow:hidden;">
+            <img [src]="mainImage"
                 alt="image">
         </div>
-        <div class="w-full col-span-2 row-span-2 rounded">
-            <img src="https://img.freepik.com/free-vector/sport-car-jdm-illustration_73313-244.jpg?w=2000"
+        <div (click)="onSelect(galleryItem)" *ngFor="let galleryItem of galleryData" class="w-full rounded hover:shadow-2xl hover:-translate-y-1" style="height:260px; overflow:hidden">
+            <img [src]="galleryItem.url"
                 alt="image">
         </div>
-        <div class="w-full rounded">
-            <img src="https://img.freepik.com/free-vector/sport-car-jdm-illustration_73313-244.jpg?w=2000"
-                alt="image">
-        </div>
-        <div class="w-full rounded">
-            <img src="https://img.freepik.com/free-vector/sport-car-jdm-illustration_73313-244.jpg?w=2000"
-                alt="image">
-        </div>
-        <div class="w-full rounded">
-            <img src="https://img.freepik.com/free-vector/sport-car-jdm-illustration_73313-244.jpg?w=2000"
-                alt="image">
-        </div>
-        <div class="w-full rounded">
-            <img src="https://img.freepik.com/free-vector/sport-car-jdm-illustration_73313-244.jpg?w=2000"
-                alt="image">
-        </div>
+        
     </div>
 </div>
