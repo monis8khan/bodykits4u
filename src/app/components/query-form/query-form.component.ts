@@ -7,15 +7,13 @@ import { queryFormInterface } from 'src/app/interfaces/queryFormInterface';
   styleUrls: ['./query-form.component.css']
 })
 export class QueryFormComponent implements OnInit {
-    name = ""
-    email = ""
-    message =""
   constructor() { }
 
   ngOnInit(): void {
   }
-  submitForm(){
-    console.log(this.name, this.email, this.message)
+  onSubmit(submit: any){
+    console.log(submit.form.value)
+    console.log(submit)
   }
 
 }
