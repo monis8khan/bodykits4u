@@ -4,17 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-    },
+    extend: {
     colors: {
       primary: '#99e1d9',
       secondary: '#70abaf',
       tertiary: '#32292f',
-      base: '#f0f7f4'
+      basic: '#f0f7f4'
     },
     fontFamily: {
     },
