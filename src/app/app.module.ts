@@ -12,6 +12,7 @@ import { ProjectGalleryComponent } from './components/project-gallery/project-ga
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { SectionHeaderComponent } from './components/section-header/section-header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     QueryFormComponent,
     ProjectGalleryComponent,
     FooterComponent,
+    SectionHeaderComponent,
   ],
   imports: [
     BrowserModule,
