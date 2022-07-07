@@ -1,28 +1,55 @@
-<div class='bg-secondary shadow-inner  hidden md:block' style="position: absolute;
-  height: 85px;
-  width: 100%;
-  z-index: -1;">
+<!-- normal menu -->
+<div class="hidden md:block">
+  <div class='bg-secondary shadow-inner' style="position: absolute;
+    height: 85px;
+    width: 100%;
+    z-index: -1;">
+  </div>
+  <div class="w-full container mx-auto p-6">
+    <ul class="justify-between flex">
+      <li class="mr-3">
+        <a class="inline-block rounded text-basic hover:text-tertiary py-2 px-4" href="#app-nav-bar">Home</a>
+      </li>
+      <li class="mr-3">
+        <a class="inline-block rounded text-basic hover:text-tertiary py-2 px-4" href="#app-services">Services</a>
+      </li>
+      <li class="text-primary bg-basic rounded-3xl px-5 py-10 shadow-xl">
+        <h1 class="text-3xl font-bold">Bodykits4you</h1>
+      </li>
+      <li class="mr-3">
+        <a class="inline-block rounded text-basic hover:text-tertiary py-2 px-4" href="#">Project Gallery</a>
+      </li>
+      <li class="mr-3">
+        <a class="inline-block rounded text-basic hover:text-tertiary py-2 px-4" href="#app-query-form">Contact Us</a>
+      </li>
+    </ul>
+  </div>
 </div>
-<div class="w-full container mx-auto p-6">
-  <ul class="justify-between hidden md:flex">
-    <li class="mr-3">
-      <a class="inline-block rounded text-basic hover:text-tertiary py-2 px-4"
-        href="#app-nav-bar">Home</a>
-    </li>
-    <li class="mr-3">
-      <a class="inline-block rounded text-basic hover:text-tertiary py-2 px-4"
-        href="#app-services">Services</a>
-    </li>
-    <li class="text-primary bg-basic rounded-3xl px-5 py-10 shadow-xl">
-      <h1 class="text-3xl font-bold">Bodykits4you</h1>
-    </li>
-    <li class="mr-3">
-      <a class="inline-block rounded text-basic hover:text-tertiary py-2 px-4"
-        href="#">Project Gallery</a>
-    </li>
-    <li class="mr-3">
-      <a class="inline-block rounded text-basic hover:text-tertiary py-2 px-4"
-        href="#app-query-form">Contact Us</a>
-    </li>
-  </ul>
+
+
+<!-- mobile menu -->
+<div class='bg-secondary shadow-inner block md:hidden flex flex-row-reverse items-center justify-between p-5' style="
+  height: 85px;
+  width: 100%;">
+  <!-- Hamburger Icon -->
+  <button id="menu-btn" class="block hamburger md:hidden focus:outline-none" (click)="toggleMobileMenu()">
+    <span class="hamburger-top"></span>
+    <span class="hamburger-middle"></span>
+    <span class="hamburger-bottom"></span>
+  </button>
+  <!-- Mobile Menu -->
+  
+  <div class="text-primary bg-basic rounded-xl px-3 py-5 shadow-xl md:hidden">
+    <h1 class="text-sm">Bodykits4you</h1>
+  </div>
+  <div class="md:hidden">
+      <div id="menu"
+          class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+          <a href="#">Pricing</a>
+          <a href="#">Product</a>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Community</a>
+      </div>
+  </div>
 </div>
