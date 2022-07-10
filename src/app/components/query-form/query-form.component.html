@@ -3,14 +3,10 @@
         <div class="w-full lg:w-6/12 px-4">
             <div class="relative flex flex-col min-w-0 bg-base break-words w-full shadow rounded-2xl">
                 <div class="flex-auto p-10 rounded-xl shadow-xl hover:shadow-2xl ">
-                    <header class="text-center mx-auto lg:px-20">
-                        <h2 class="text-2xl leading-normal mb-2 font-bold text-secondary">Contact Us</h2>
-                        <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Send us your queries
-                            now.</p>
-                        <!-- <div class="w-full xl:w-3/5 overflow-y-hidden">
-                            <img class="w-5/6 mx-auto lg:mr-0 slide-in-bottom  transform transition duration-300 ease-in-out hover:-translate-y-2" src="../../../assets/images/s15.jpg">
-                        </div> -->
-                    </header>
+                    <!-- section header -->
+                    <app-section-header heading="Contact Us"
+                        desc="Send Your Queries Now"></app-section-header>
+
                     <form #submit="ngForm" (ngSubmit)="onSubmit(submit)">
                         <div class="relative w-full mb-3 mt-8">
                             <label htmlfor="full-name" class="block uppercase text-secondary text-xs font-bold mb-2">
@@ -31,7 +27,7 @@
                                 class="focus:-translate-x-1 font-light border-0 px-3 py-3 placeholder-blueGray-300 text-secondary rounded-xl bg-white rounded text-sm shadow focus:outline-none w-full"></textarea>
                         </div>
                         <div class="text-center mt-6"><button type="button" type="submit"
-                                class="bg-secondary text-base active:bg-secondary text-sm font-bold uppercase px-6 py-3 rounded shadow hover:bg-tertiary outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                                class="bg-secondary text-basic active:bg-secondary text-sm font-bold uppercase px-6 py-3 rounded shadow hover:bg-tertiary outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                                 Send Message </button>
                         </div>
                     </form>
