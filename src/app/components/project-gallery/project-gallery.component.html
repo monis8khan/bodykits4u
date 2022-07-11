@@ -1,18 +1,25 @@
 <div class="container mx-auto mb-20">
-    
+
     <!-- section header -->
-    <app-section-header heading="Our Projects" desc="We provide best and top of the line body kits &amp; car parts."></app-section-header>
+    <app-section-header heading="Our Projects" desc="We provide best and top of the line body kits &amp; car parts.">
+    </app-section-header>
+
     <!-- section content -->
     <div class="px-4 flex flex-wrap flex-row">
-        <div
-            class="flex-shrink grid-cols-3 p-20 space-y-2 bg-basic rounded-3xl shadow-xl lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3 cursor-pointer">
+        <div class="flex-shrink p-5 space-y-2 bg-basic rounded-3xl shadow-xl grid gap-1">
 
-            <div class="w-full col-span-2 row-span-2 rounded" style="height:533px; overflow:hidden;">
-                <img [src]="mainImage" alt="image">
+            <div class="w-full rounded">
+                <img [src]="mainImage" alt="image" class="rounded-2xl">
             </div>
-            <div (click)="onSelect(galleryItem)" *ngFor="let galleryItem of galleryData"
-                class="w-full rounded hover:shadow-2xl hover:-translate-y-1" style="height:260px; overflow:hidden">
-                <img [src]="galleryItem.url" alt="image">
+            <div class="flex flex-row w-full cursor-pointer">
+                <label for="carousel-3" class="prev control-1 w-5 h-5 cursor-pointer text-md font-bold text-black hover:text-secondary rounded-full leading-tight text-center z-10 inset-y-0 left-0 my-auto 
+    md:text-3xl md:w-10 md:h-10 mx-1">‹</label>
+                <div (click)="onSelect(galleryItem)" *ngFor="let galleryItem of galleryData"
+                    class="w-full rounded cursor-pointer mx-1 flex items-center hover:shadow-2xl hover:-translate-y-1">
+                    <img [src]="galleryItem.url" alt="image" class="rounded items-center">
+                </div>
+                <label for="carousel-2" class="control-1 w-5 h-5 cursor-pointer text-md font-bold text-black hover:text-secondary rounded-full leading-tight text-center z-10 inset-y-0 left-0 my-auto 
+                md:text-3xl md:w-10 md:h-10 mx-1">›</label>
             </div>
 
         </div>

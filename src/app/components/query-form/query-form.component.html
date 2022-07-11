@@ -9,25 +9,25 @@
 
                     <form #submit="ngForm" (ngSubmit)="onSubmit(submit)">
                         <div class="relative w-full mb-3 mt-8">
-                            <label htmlfor="full-name" class="block uppercase text-secondary text-xs font-bold mb-2">
+                            <label htmlfor="full-name" class="block uppercase text-secondary text-xs font-bold mb-2 md:text-lg">
                                 Full Name </label>
                             <input type="text" placeholder="Full Name" name="full-name" ngModel required
-                                class="focus:-translate-x-1 font-light border-0 px-3 py-3 placeholder-blueGray-300 text-secondary rounded-xl bg-white rounded text-sm shadow focus:outline-none w-full ease-linear transition-all duration-150">
+                                class="focus:-translate-x-1 font-light border-0 px-3 py-3 placeholder-blueGray-300 text-secondary rounded-xl bg-white rounded text-xs md:text-sm shadow focus:outline-none w-full ease-linear transition-all duration-150">
                         </div>
                         <div class="relative w-full mb-3">
-                            <label htmlfor="email" class="block uppercase text-secondary text-xs font-bold mb-2"> Email
+                            <label htmlfor="email" class="block uppercase text-secondary text-xs font-bold mb-2 md:text-lg"> Email
                             </label>
                             <input type="email" placeholder="Email" name="email" ngModel required
-                                class="focus:-translate-x-1 font-light border-0 px-3 py-3 placeholder-blueGray-300 text-secondary rounded-xl bg-white rounded text-sm shadow focus:outline-none w-full ease-linear transition-all duration-150">
+                                class="focus:-translate-x-1 font-light border-0 px-3 py-3 placeholder-blueGray-300 text-secondary rounded-xl bg-white rounded text-xs md:text-sm shadow focus:outline-none w-full ease-linear transition-all duration-150">
                         </div>
                         <div class="relative w-full mb-3">
-                            <label htmlfor="message" class="block uppercase text-secondary text-xs font-bold mb-2">
+                            <label htmlfor="message" class="block uppercase text-secondary text-xs font-bold mb-2 md:text-lg">
                                 Message </label>
                             <textarea rows="4" cols="80" placeholder="Type a message..." name="message" ngModel required
-                                class="focus:-translate-x-1 font-light border-0 px-3 py-3 placeholder-blueGray-300 text-secondary rounded-xl bg-white rounded text-sm shadow focus:outline-none w-full"></textarea>
+                                class="focus:-translate-x-1 font-light border-0 px-3 py-3 placeholder-blueGray-300 text-secondary rounded-xl bg-white rounded text-xs md:text-sm shadow focus:outline-none w-full"></textarea>
                         </div>
                         <div class="text-center mt-6"><button type="button" type="submit"
-                                class="bg-secondary text-basic active:bg-secondary text-sm font-bold uppercase px-6 py-3 rounded shadow hover:bg-tertiary outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+                                class="bg-secondary mt-5 hover:bg-tertiary text-basic py-2 px-4 rounded mx-auto text-sm md:text-xl">
                                 Send Message </button>
                         </div>
                     </form>
