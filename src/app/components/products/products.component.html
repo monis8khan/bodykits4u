@@ -1,16 +1,22 @@
-<div class="flex flex-col">
-    <div *ngFor="let prducts of productsList" class="max-w-sm bg-basic rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-            <img class="p-8 rounded-t-lg" [src]="prducts.image" alt="product image">
-        </a>
-        <div class="px-5 pb-5">
+<div class="container mx-auto mb-20">
+
+    <!-- section header -->
+    <app-section-header heading="Our Products" desc="We provide best and top of the line body kits &amp; car parts.">
+    </app-section-header>
+
+    <div class="grid grid-cols-1 gap-2 px-5 md:grid-cols-6 md:gap-2 md:px-20">
+        <div *ngFor="let prducts of productsList" class="bg-basic rounded-lg shadow-md px-2 py-5">
             <a href="#">
-                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{prducts.title}}</h5>
+                <img class="h-20 mx-auto rounded-t-lg" [src]="prducts.image" alt="product image">
             </a>
-            <div class="flex justify-between items-center">
-                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+            <h5 class="text-sm text-secondary py-5 w-full">{{prducts.title}}</h5>
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-md font-bold">$599</span>
             </div>
+            <a href="#"
+                class="w-full bg-secondary hover:bg-tertiary text-basic py-2 px-4 rounded text-xs md:text-sm justify-center">Add
+                to
+                cart</a>
         </div>
     </div>
 </div>
