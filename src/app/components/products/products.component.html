@@ -4,7 +4,7 @@
     <app-section-header heading="Our Products" desc="We provide best and top of the line body kits &amp; car parts.">
     </app-section-header>
 
-    <div class="grid grid-cols-1 gap-2 px-5 md:grid-cols-6 md:gap-2 md:px-20">
+    <div class="grid grid-cols-1 gap-2 px-5 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-3 md:gap-2 sm:grid-cols-2 md:px-20">
         <div *ngFor="let prducts of productsList" class="bg-basic rounded-lg shadow-md px-2 py-5 flex flex-col justify-between ">
             <a href="#">
                 <img class="h-20 mx-auto rounded-t-lg" [src]="prducts.image" alt="product image">
