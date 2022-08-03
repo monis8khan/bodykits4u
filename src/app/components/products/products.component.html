@@ -5,16 +5,16 @@
     </app-section-header>
 
     <div class="grid grid-cols-1 gap-2 px-5 md:grid-cols-6 md:gap-2 md:px-20">
-        <div *ngFor="let prducts of productsList" class="bg-basic rounded-lg shadow-md px-2 py-5">
+        <div *ngFor="let prducts of productsList" class="bg-basic rounded-lg shadow-md px-2 py-5 flex flex-col justify-between ">
             <a href="#">
                 <img class="h-20 mx-auto rounded-t-lg" [src]="prducts.image" alt="product image">
             </a>
-            <h5 class="text-sm text-secondary py-5 w-full">{{prducts.title}}</h5>
-            <div class="flex justify-between items-center mb-2">
+            <h5 class="text-sm text-secondary py-5 w-full text-center">{{prducts.title}}</h5>
+            <div class="items-center mb-2">
                 <span class="text-md font-bold">$599</span>
             </div>
             <a href="#"
-                class="w-full bg-secondary hover:bg-tertiary text-basic py-2 px-4 rounded text-xs md:text-sm justify-center">Add
+                class="w-full bg-secondary hover:bg-tertiary text-basic py-2 px-4 rounded text-xs md:text-sm text-center">Add
                 to
                 cart</a>
         </div>
